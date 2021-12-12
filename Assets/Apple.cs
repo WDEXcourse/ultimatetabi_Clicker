@@ -16,6 +16,7 @@ public class Apple : MonoBehaviour
     public Text CountText;
 
     public ScoreUP scoreupscript;
+    public GameObject AppleObject;
 
     // Start is called before the first frame update
     void Start()
@@ -57,5 +58,11 @@ public class Apple : MonoBehaviour
         Vector3 force = gameObject.transform.up * 1000f;
         IncreaseTexts.GetComponent<Rigidbody2D>().AddForce(force);
         Destroy(IncreaseTexts.gameObject, 0.5f);
+
+        for(int i = 0; i < 1 *scoreupscript.scoreup; i++)
+        {
+            float x = Random.Range(-8, 8);
+            Instantiate(AppleObject.gameObject,new Vector3(x,412f,0),Quaternion.identity);
     }
+}
 }
