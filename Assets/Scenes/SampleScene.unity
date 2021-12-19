@@ -935,6 +935,8 @@ MonoBehaviour:
   applescript: {fileID: 607952785}
   Number0fPeople: 0
   Price: 10
+  AppleObject: {fileID: 8540932409362417245, guid: 70df48191982fcf47a2e715cb13223ad,
+    type: 3}
 --- !u!114 &895345997
 MonoBehaviour:
   m_ObjectHideFlags: 0

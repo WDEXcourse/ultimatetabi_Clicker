@@ -13,6 +13,8 @@ public class Help : MonoBehaviour
     [SerializeField]
     private int Price = 10;
 
+    public GameObject AppleObject;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +45,12 @@ public class Help : MonoBehaviour
     {
         applescript.Count += 1 * Number0fPeople;
         HelpController = true;
+
+        for (int i = 0; i < Number0fPeople; i++)
+        {
+            float x = Random.Range(-8, 8);
+            Instantiate(AppleObject.gameObject, new Vector3(x, 4.13f, 0), Quaternion.identity);
+        }
         yield return new WaitForSeconds(1);
         HelpController = false;
     }

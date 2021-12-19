@@ -62,7 +62,8 @@ public class Apple : MonoBehaviour
         for(int i = 0; i < 1 *scoreupscript.scoreup; i++)
         {
             float x = Random.Range(-8, 8);
-            Instantiate(AppleObject.gameObject,new Vector3(x,412f,0),Quaternion.identity);
-    }
+            GameObject apple = Instantiate(AppleObject.gameObject,new Vector3(x,412f,0),Quaternion.identity);
+            Destroy(apple.gameObject, 2f);
+        }
 }
 }
