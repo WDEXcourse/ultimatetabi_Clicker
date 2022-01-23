@@ -32,12 +32,12 @@ public class Apple : MonoBehaviour
         IncreaseText.text = "+" + Increase.ToString();
         if (SizeChange == true)
         {
-            transform.localScale = Vector3.Lerp(transform.localScale, new Vector3(9, 9, 9), Time.deltaTime * 10);
+            transform.localScale = Vector3.Lerp(transform.localScale, new Vector3(1, 1, 1), Time.deltaTime * 10);
             SizeTimer += Time.deltaTime;
 
             if (SizeTimer >= 0.3f)
             {
-                this.transform.localScale = Vector3.Lerp(transform.localScale, new Vector3(10, 10, 10), Time.deltaTime * 10);
+                this.transform.localScale = Vector3.Lerp(transform.localScale, new Vector3(2, 2, 2), Time.deltaTime * 10);
                 if (SizeTimer >= 0.6f)
                 {
                     SizeTimer = 0;
